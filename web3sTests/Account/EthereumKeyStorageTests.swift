@@ -42,7 +42,7 @@ class EthereumKeyStorageTests: XCTestCase {
     }
     
     func testEncryptAndStorePrivateKey() {
-        let randomData = Data.randomOfLength(256)!
+        let randomData = Data.randomOfLength(32)!
         let keyStorage = EthereumKeyLocalStorage() as EthereumSingleKeyStorageProtocol
         let password = "myP4ssw0rD"
 
@@ -56,7 +56,7 @@ class EthereumKeyStorageTests: XCTestCase {
     }
 
     func testEncryptAndStorePrivateKeyMultiple() {
-        let randomData = Data.randomOfLength(256)!
+        let randomData = Data.randomOfLength(32)!
         let keyStorage = EthereumKeyLocalStorage() as EthereumMultipleKeyStorageProtocol
         let password = "myP4ssw0rD"
 
