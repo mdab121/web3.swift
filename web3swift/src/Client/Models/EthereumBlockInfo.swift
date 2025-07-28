@@ -6,7 +6,7 @@
 import BigInt
 import Foundation
 
-public struct EthereumBlockInfo: Equatable {
+public struct EthereumBlockInfo: Equatable, Sendable {
     public var number: EthereumBlock
     public var timestamp: Date
     public var transactions: [String]

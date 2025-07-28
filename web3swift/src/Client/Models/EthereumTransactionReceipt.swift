@@ -6,13 +6,13 @@
 import BigInt
 import Foundation
 
-public enum EthereumTransactionReceiptStatus: Int {
+public enum EthereumTransactionReceiptStatus: Int, Sendable {
     case success = 1
     case failure = 0
     case notProcessed = -1
 }
 
-public struct EthereumTransactionReceipt: Decodable {
+public struct EthereumTransactionReceipt: Decodable, Sendable {
     public var transactionHash: String
     public var transactionIndex: BigUInt
     public var blockHash: String
